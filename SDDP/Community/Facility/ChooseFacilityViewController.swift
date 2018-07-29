@@ -1,24 +1,17 @@
 //
-//  ChooseDateViewController.swift
+//  ChooseFacilityViewController.swift
 //  SDDP
 //
-//  Created by hhf on 24/7/18.
+//  Created by hhf on 29/7/18.
 //  Copyright © 2018 ITP312. All rights reserved.
 //
 
 import UIKit
 
-class ChooseDateViewController: UIViewController {
-    //weak var dateDelegate:DateSelectDelegate?
-    var bookingController:BookingUIViewController?
+class ChooseFacilityViewController: UIViewController {
 
-    
-    @IBOutlet weak var datePicker: UIDatePicker!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        
 
         // Do any additional setup after loading the view.
     }
@@ -26,17 +19,6 @@ class ChooseDateViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    @IBAction func onSaveSatePressed(_ sender: Any) {
-        let date=datePicker.date
-        print("start")
-        bookingController?.dateSelect(date: date)
-        print("end")
-        
-        //dateDelegate?.dateSelected(date: date)
-        
-        
-        dismiss(animated: true)
     }
     
 
