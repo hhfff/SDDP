@@ -48,7 +48,7 @@ class CommunityViewController: UIViewController,CCData{
         courseButton.layer.borderWidth=borderWidth
         courseButton.layer.borderColor=black.cgColor
         courseButton.layer.cornerRadius=cornerRadius
-        fetchCCInfo(ccName:"NEE SOON SOUTH")
+        fetchCCInfo(ccName:"Ang Mo Kio CC")
         
         
         
@@ -64,6 +64,7 @@ class CommunityViewController: UIViewController,CCData{
     }
     func fetchCCInfo(ccName:String){
         
+        
         ref.child("cc").child("\(ccName)").observe(.value, with: { (snapshot) in
             //print("retrive data")
             let value=snapshot.value as? NSDictionary
@@ -78,13 +79,6 @@ class CommunityViewController: UIViewController,CCData{
                     //self.update2()
                     self.updateCCInfo(cc:self.cc!)
             }
-            
-            
-            
-            
-                       //print("\(self.cc!.name) in fatch")
-            
-            
             
         })
         

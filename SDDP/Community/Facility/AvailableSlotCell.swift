@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+class AvailableSlotCell:UITableViewCell{
+    
+    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var background: UIView!
+    
+    
+}

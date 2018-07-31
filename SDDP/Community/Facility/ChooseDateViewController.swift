@@ -12,11 +12,24 @@ class ChooseDateViewController: UIViewController {
     //weak var dateDelegate:DateSelectDelegate?
     var bookingController:BookingUIViewController?
 
+    @IBAction func onSavePressed(_ sender: Any) {
+        let date=datePicker.date
+        
+        bookingController?.dateSelect(date: date)
+        bookingController?.loadAvailableSlot()
+    
+        
+        //dateDelegate?.dateSelected(date: date)
+        
+        
+        dismiss(animated: true)
+    }
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker.minimumDate=Date()
     
         
 
@@ -27,17 +40,7 @@ class ChooseDateViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func onSaveSatePressed(_ sender: Any) {
-        let date=datePicker.date
-        print("start")
-        bookingController?.dateSelect(date: date)
-        print("end")
-        
-        //dateDelegate?.dateSelected(date: date)
-        
-        
-        dismiss(animated: true)
-    }
+    
     
 
     /*

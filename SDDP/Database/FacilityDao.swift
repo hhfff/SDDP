@@ -16,9 +16,7 @@ protocol FacilitDatabase{
 class FacilityFireBaseDao:FacilitDatabase{
     static func getAllFacilityByCC(cc: CommunityCenter) -> [Facility] {
         var list=[Facility]()
-        list.append(Facility(1,"Badminton Court","Nee Soon South CC",1))
-        list.append(Facility(2,"Theatrette","Nee Soon South CC",1))
-        list.append(Facility(3,"Multi-Purpose Hall","Nee Soon South CC",1))
+        
         
         
         return list

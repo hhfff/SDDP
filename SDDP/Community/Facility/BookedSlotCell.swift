@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import UIKit
+class BookedSlotCell:UITableViewCell{
+    @IBOutlet weak var facility: UILabel!
+    
+    @IBOutlet weak var date: UILabel!
+}
